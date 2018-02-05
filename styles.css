@@ -1,0 +1,278 @@
+/* common styles */
+*, 
+*:before, 
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 50px 0 0;
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  color: #2d3c49;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 40px;
+  color: #7d97ad;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  font-size: 26px;
+  color: #2d3c49;
+}
+
+/*Bootstrap navbar adjustments*/
+
+.navbar-brand {
+  padding: 0;
+
+}
+
+.navbar-brand >img {
+  padding: 5px 0 0 5px;
+}
+
+
+
+
+ /*Main - About Me*/
+
+#about-me {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.background-img {
+  width: 100%;
+  filter: blur(0.5px);
+}
+
+.intro {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.5em 2em;
+}
+
+.intro {
+  -webkit-box-shadow: 20px 20px 14px -3px rgba(0,0,0,0.32);
+  -moz-box-shadow: 20px 20px 14px -3px rgba(0,0,0,0.32);
+  box-shadow: 20px 20px 14px -3px rgba(0,0,0,0.32);
+}
+
+.greet {
+  font-size: 40px;
+  color: #ef4035;
+  line-height: 1.3em;
+}
+
+.description {
+  font-size: 20px;
+  color: white;
+}
+
+
+
+
+
+/* Featured Work */
+
+#featured-work {
+  padding: 1em;
+}
+
+.feature-title {
+  text-align: center;
+  color: #7d97ad;
+  margin: 1.5em auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.flex-container>* {
+  flex: 1 1 300px;
+}
+
+.flex-item {
+  margin: 2%;
+}
+
+.work-img {
+  width: 100%;
+  border-radius: 25px 0;
+}
+
+.work-img:hover {
+  opacity: 0.2;
+}
+
+
+.work-title {
+  margin: 2em auto;
+
+}
+
+.work-detail {
+  line-height: 1.5em;
+  padding: 0 2em 1em;
+}
+
+/*Contact Me*/
+
+#contact{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #f0f0f0;
+  padding: 30px 15px;
+}
+
+.contact-form {
+  text-align: left;
+  padding: 25px 10%;
+}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #7d97ad;
+  border-radius: 5px;
+  margin:15px auto 15px;
+}
+
+label {
+  margin: 10px auto 5px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 250px;
+}
+
+input[type=submit] {
+  background-color: #ef4035;
+  color:white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Footer */
+
+footer {
+  background-color: #f8f8f9;
+  height: 60px;
+  text-align: center;
+  padding: 1.5em;
+  color: #2d3c49;
+  border-top: 1px solid #e7e7e7;
+  }
+
+
+/*Media queries*/
+
+/*For mobile screens*/
+
+@media screen and (max-width: 700px) {
+
+  .intro {
+    padding: 0.5em;
+  }
+
+  .greet {
+  font-size: 22px;
+  line-height: 1em;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .feature-title {
+    margin: 0.8em auto;
+  }
+
+
+}
+
+/*Change default bootstrap breakpoint */
+@media only screen and (min-width: 700px) {
+    .collapse {
+        display: block;
+    }
+
+    .navbar-header {
+        float: left;
+    }
+
+    .navbar-toggle {
+        display: none;
+    }
+
+    .navbar-nav.navbar-right {
+       float: right;
+       margin: 0 -15px;
+    }
+    
+    .navbar-nav>li {
+        float: left;
+    }
+    
+    .navbar-nav>li>a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+     .collapse {
+        display: none;
+     }
+
+     .navbar-header {
+        display: block;
+     }
+
+     .navbar-brand >img {
+        padding: 9px 0 0 8px;
+      }
+}
+
+
+/*For desktop screens*/
+@media screen and (min-width: 1500px) {
+  .container-fluid,
+  #about-me,
+  #featured-work,
+  #contact {
+    width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.intro {
+    padding: 4em;
+  }
+
+}
+
+
